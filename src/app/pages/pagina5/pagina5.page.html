@@ -1,0 +1,19 @@
+<ion-header id="header"  style="background-color: rgb(1, 44, 86);">
+  <h1 style="color: white;">RegistrAPP</h1>
+  <img src="./../../../assets/duoc.png" style="width: 100%">
+</ion-header>
+
+
+<ion-content [fullscreen]="true" style="background-color: white;display: flex;">
+  <ion-card *ngIf="qrData">
+    <ngx-qrcode [elementType]="elementType" [value]="qrData"></ngx-qrcode>
+  </ion-card>
+  <ion-button routerLink="/pagina2" color="warning" style="width: 90%; margin-left:5%; margin-right: 5%;">Volver</ion-button>
+
+</ion-content>
+
+<ion-footer style="background-color: rgb(7, 56, 204)">
+  <ion-toolbar>
+    <h1>DuocUC</h1>
+  </ion-toolbar>
+</ion-footer>

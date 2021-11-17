@@ -1,0 +1,33 @@
+<ion-header id="header"  style="background-color: rgb(1, 44, 86);">
+  <h1>RegistrAPP</h1>
+  <img src="./../../../assets/duoc.png" style="width: 100%">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div style="background-color: rgb(1, 44, 86);">Docente</div>
+  <form [formGroup]="Usuario" (ngSubmit)="IngresarDocente()">
+  <div>
+    <ion-item>
+      <ion-label position="stacked">Nombre de Usuario</ion-label>
+      <ion-input formControlName="elUsuario"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input formControlName="laPass"></ion-input>
+    </ion-item>
+    <a href="" routerLink="/pagina1/" style="text-decoration: none;"><h6 style="margin-left: 8vh">¿Olvido su contraseña?</h6></a>
+    <ion-button type="submit" color="warning" style="width: 90%; margin-left:5%; margin-right: 5%;">Ingresar</ion-button>
+    <a href="" routerLink="/home/" style="text-decoration: none;"><h6 >Ingresar como Alumno</h6></a>
+  </div>
+</form>
+</ion-content>
+
+<ion-footer style="background-color: rgb(7, 56, 204)">
+  <ion-toolbar>
+    <h1>DuocUC</h1>
+  </ion-toolbar>
+</ion-footer>
+
+
+
+
