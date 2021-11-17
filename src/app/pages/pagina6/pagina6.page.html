@@ -4,8 +4,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<div style="background-color: rgb(1, 44, 86);">Docente</div>
-  <form [formGroup]="Usuario" (ngSubmit)="IngresarDocente()">
+
+<div style="background-color: rgb(1, 44, 86);">Alumnos</div>
+  <form [formGroup]="nuevoUsuario" (ngSubmit)="Registrar()">
   <div>
     <ion-item>
       <ion-label position="stacked">Nombre de Usuario</ion-label>
@@ -15,10 +16,17 @@
       <ion-label position="stacked">Contraseña</ion-label>
       <ion-input formControlName="laPass"></ion-input>
     </ion-item>
-    <a href="" routerLink="/pagina1/" style="text-decoration: none;"><h6 style="margin-left: 8vh">¿Olvido su contraseña?</h6></a>
-    <ion-button type="submit" color="warning" style="width: 90%; margin-left:5%; margin-right: 5%;">Ingresar</ion-button>
-    <a href="" routerLink="/home/" style="text-decoration: none;"><h6 >Ingresar como Alumno</h6></a>
-    <a href="" routerLink="/pagina6/" style="text-decoration: none;"><h6 >Registrarse</h6></a>
+    <ion-item>
+      <ion-label position="stacked">Repetir Contraseña</ion-label>
+      <ion-input formControlName="laPass2"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Correo electronico</ion-label>
+      <ion-input formControlName="correo"></ion-input>
+    </ion-item>
+    <a href="" routerLink="/home/" style="text-decoration: none;"><h6 >Volver</h6></a>
+    <ion-button color="warning" style="width: 90%; margin-left:5%; margin-right: 5%;" type="submit">Registrar</ion-button>
+
   </div>
 </form>
 </ion-content>

@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'pagina5',
     loadChildren: () => import('./pages/pagina5/pagina5.module').then( m => m.Pagina5PageModule)
   },
+  {
+    path: 'pagina6',
+    loadChildren: () => import('./pages/pagina6/pagina6.module').then( m => m.Pagina6PageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./pages/p404/p404.module').then( m => m.P404PageModule)
+  },
 ];
 
 @NgModule({
