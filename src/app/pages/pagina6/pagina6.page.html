@@ -6,8 +6,12 @@
 <ion-content [fullscreen]="true">
 
 <div style="background-color: rgb(1, 44, 86);">Alumnos</div>
-  <form [formGroup]="nuevoUsuario" (ngSubmit)="Registrar()">
+  <form [formGroup]="nuevoUsuario" (ngSubmit)="add()">
   <div>
+    <ion-item>
+      <ion-label position="stacked">RUT</ion-label>
+      <ion-input formControlName="elRut"></ion-input>
+    </ion-item>
     <ion-item>
       <ion-label position="stacked">Nombre de Usuario</ion-label>
       <ion-input formControlName="elUsuario"></ion-input>
@@ -26,6 +30,7 @@
     </ion-item>
     <a href="" routerLink="/home/" style="text-decoration: none;"><h6 >Volver</h6></a>
     <ion-button color="warning" style="width: 90%; margin-left:5%; margin-right: 5%;" type="submit">Registrar</ion-button>
+    <ion-button color="warning" style="width: 90%; margin-left:5%; margin-right: 5%;" routerLink="/lista-usuarios">Lista Usuarios</ion-button>
 
   </div>
 </form>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import { NavController } from '@ionic/angular';
 export class HomePage {
 
   constructor( private navController:NavController,
-               private router: Router ) {}
+               private router: Router,
+               private auth : AuthenticationService ) {}
 
   Usuario = new FormGroup({
     elUsuario : new FormControl(''),
@@ -28,7 +30,7 @@ export class HomePage {
 
   usu:any;
 
-  IngresarAlumno(){
+  /*IngresarAlumno(){
     this.usu={
       nom: this.Usuario.controls.elUsuario.value,
       pass: this.Usuario.controls.laPass.value
@@ -44,5 +46,13 @@ export class HomePage {
     this.Usuario.controls.nom.setValue('');
     this.Usuario.controls.pass.setValue('');
 
+  }*/
+
+  ingresarAlumno(){
+    this.usu ={
+      nom : this.Usuario.controls.elUsuario.value,
+      pass : this.Usuario.controls.laPass.value
+    }
+    this.auth.login(this.usu.nom,this.usu.pass);
   }
 }

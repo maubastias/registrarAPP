@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listaUsuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list *ngFor="let u of lista">
+  <h6 style="background-color: yellow;color: yellow;">-</h6>
+  <ion-item>
+    <ion-label>Rut: {{u.rut}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-input>{{u.nombre}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input>{{u.pass}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input>{{u.pass2}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input>{{u.correo}}</ion-input>
+  </ion-item>
+</ion-list>
+<ion-button color="warning" style="width: 90%; margin-left:5%; margin-right: 5%;" routerLink="/home/">Volver al inicio</ion-button>
+
+</ion-content>

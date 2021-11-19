@@ -36,9 +36,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/pagina6/pagina6.module').then( m => m.Pagina6PageModule)
   },
   {
+    path: 'lista-usuarios',
+    loadChildren: () => import('./pages/lista-usuarios/lista-usuarios.module').then( m => m.ListaUsuariosPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/p404/p404.module').then( m => m.P404PageModule)
-  },
+  }
 ];
 
 @NgModule({
